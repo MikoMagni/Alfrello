@@ -10,9 +10,10 @@
 
 // API KEY: 
 // https://trello.com/1/connect?key=[API_KEY]&name=[APP_NAME]&response_type=token&scope=read,write&expiration=never
+// https://trello.com/1/connect?key=1433c6977ccb78cd82e29a5455a24815&name=Trello%20for%20Alfred&response_type=token&scope=read,write&expiration=never
 
 
-$trello_key          = '';
+$trello_key          = '1433c6977ccb78cd82e29a5455a24815';
 $trello_api_endpoint = 'https://api.trello.com/1';
 $trello_list_id      = false;
 $data				 = explode( ";", $argv[1] );
@@ -21,6 +22,7 @@ $trello_board_id     = $data[1];
 $list_name		     = $data[2];
 $name 				 = (isset($data[3])) ? stripslashes(trim($data[3])) : 'Untitled card';
 $desc 				 = (isset($data[4])) ? stripslashes(trim($data[4])) : '';
+$due 				 = (isset($data[5])) ? stripslashes(trim($data[5])) : '';
 $url				 = "{$trello_api_endpoint}/boards/{$trello_board_id}?lists=open&list_fields=name&fields=name,desc&key={$trello_key}&token={$trello_member_token}";
 
 $ch = curl_init();
@@ -55,7 +57,8 @@ $trello_list_id = $lists[0]->id;
 		        'token'  => $trello_member_token,
 		        'idList' => $trello_list_id,
 		        'name'   => $name,
-		        'desc'   => $desc
+		        'desc'   => $desc,
+		        'due'	 => $due
 		    )),
 		));
 		
