@@ -1,14 +1,14 @@
 <?php
 
 /* -----------------------------------
-	Script: 	Trello for Alfred 1.0b
+	Script: 	Trello for Alfred
 	Author: 	Tom Longo
 	Usage:		trello <Card name>;<Card description>
-	Desc:		Add cards to Trello
-	Updated:	20/03/13
+	Desc:		Adds card to trello
+	Updated:	16/03/13
 ----------------------------------- */
 
-// API KEY: 
+// API KEY: 1433c6977ccb78cd82e29a5455a24815
 // https://trello.com/1/connect?key=[API_KEY]&name=[APP_NAME]&response_type=token&scope=read,write&expiration=never
 // https://trello.com/1/connect?key=1433c6977ccb78cd82e29a5455a24815&name=Trello%20for%20Alfred&response_type=token&scope=read,write&expiration=never
 
@@ -19,10 +19,12 @@ $trello_list_id      = false;
 $data				 = explode( ";", $argv[1] );
 $trello_member_token = $data[0];
 $trello_board_id     = $data[1];
-$list_name		     = $data[2];
+$list_name		     = (isset($data[2])) ? stripslashes(trim($data[2])) : '';
 $name 				 = (isset($data[3])) ? stripslashes(trim($data[3])) : 'Untitled card';
 $desc 				 = (isset($data[4])) ? stripslashes(trim($data[4])) : '';
-$due 				 = (isset($data[5])) ? stripslashes(trim($data[5])) : '';
+$labels				 = (isset($data[5])) ? stripslashes(trim($data[5])) : '';
+$due 				 = (isset($data[6])) ? stripslashes(trim($data[6])) : '';
+$position			 = (isset($data[7])) ? stripslashes(trim($data[7])) : 'bottom';	
 $url				 = "{$trello_api_endpoint}/boards/{$trello_board_id}?lists=open&list_fields=name&fields=name,desc&key={$trello_key}&token={$trello_member_token}";
 
 $ch = curl_init();
@@ -58,7 +60,9 @@ $trello_list_id = $lists[0]->id;
 		        'idList' => $trello_list_id,
 		        'name'   => $name,
 		        'desc'   => $desc,
-		        'due'	 => $due
+		        'labels' => $labels,
+		        'due'	 => $due,
+		        'pos'	 => $position
 		    )),
 		));
 		
