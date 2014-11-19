@@ -1,10 +1,10 @@
----
-#Alfred for Trello - Workflow
-###Create cards in Trello via @alfredapp for Mac.
 
 
-**[Download Alfred for Trello 1.0](https://dl.dropbox.com/s/bb86royejj6r7o7/index.html)**
+# Alfred for Trello - Workflow
+### Create cards in Trello via @alfredapp for Mac.
 
+
+[**Download Alfred for Trello 1.0**](https://dl.dropbox.com/s/bb86royejj6r7o7/index.html)
 
 ---
 
