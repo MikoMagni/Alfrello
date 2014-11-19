@@ -13,7 +13,7 @@
 // https://trello.com/1/connect?key=1433c6977ccb78cd82e29a5455a24815&name=Trello%20for%20Alfred&response_type=token&scope=read,write&expiration=never
 
 
-$trello_key          = '1433c6977ccb78cd82e29a5455a24815';
+$trello_key          = '';
 $trello_api_endpoint = 'https://api.trello.com/1';
 $trello_list_id      = false;
 $data				 = explode( ";", $argv[1] );
