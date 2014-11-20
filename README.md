@@ -4,7 +4,7 @@
 ### Create cards in Trello via @alfredapp for Mac.
 
 
-[**Download Alfred for Trello 1.0**](https://dl.dropbox.com/s/bb86royejj6r7o7/index.html)
+[**Download Alfred for Trello 1.5**](https://dl.dropbox.com/s/bb86royejj6r7o7/index.html)
 
 ---
 
@@ -25,24 +25,24 @@
 7. Within the Alfred for Trello workflow double click the Hotkey and set "Option + Command + t" or your preferred hotkey.
 
 
-###Optional
-You can specifify a list within your Trello board. 
-Simply open the /bin/bash script within the workflow and enter the name of the list. For example if your list name is inbox enter:  **listname='inbox'**.
-If you leave it blank **listname=''** the first list within your board will be used as default list.
-
 
 <br>
 
 ##Usage
 
 * **trello card name; description**
+        
+	Example: trello **Do work!; seriously, do work; red; 09/01/2015; Inbox**
 
+	**Do work!** - Card title 
 
-	Example: trello **Do work!; seriously, do work**
-
-	**Do work!** Will be the Card title 
-
-	**seriously, do work** Will be the Card description
+	**seriously, do work** - Card description
+	
+	**red** - Card label
+	
+	**09/01/2015** - Card due date
+	
+	**Inbox** - List Name
 
 	---
 
