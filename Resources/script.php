@@ -1,29 +1,30 @@
 <?php
 
-/* -----------------------------------
-	Script: 	Trello for Alfred
-	Author: 	Tom Longo
-	Usage:		trello <Card name>;<Card description>
-	Desc:		Adds card to trello
-	Updated:	16/03/13
------------------------------------ */
+/* ----------------------------------------------------------------------------------------------
+	Script: 	  Trello for Alfred
+	Author: 	  Tom Longo
+	Contributors: Miko Magni, cokeby190
+	Usage:		  trello <Card name>;<Card description>;<Label>;<Due Date>;<List Name>   
+	Desc:		  Adds card to trello
+	Updated:	  20/11/14
+------------------------------------------------------------------------------------------------- */
 
 // API KEY: 1433c6977ccb78cd82e29a5455a24815
 // https://trello.com/1/connect?key=[API_KEY]&name=[APP_NAME]&response_type=token&scope=read,write&expiration=never
 // https://trello.com/1/connect?key=1433c6977ccb78cd82e29a5455a24815&name=Trello%20for%20Alfred&response_type=token&scope=read,write&expiration=never
 
 
-$trello_key          = '';
+$trello_key          = '1433c6977ccb78cd82e29a5455a24815';
 $trello_api_endpoint = 'https://api.trello.com/1';
 $trello_list_id      = false;
 $data				 = explode( ";", $argv[1] );
 $trello_member_token = $data[0];
 $trello_board_id     = $data[1];
-$list_name		     = (isset($data[2])) ? stripslashes(trim($data[2])) : '';
-$name 				 = (isset($data[3])) ? stripslashes(trim($data[3])) : 'Untitled card';
-$desc 				 = (isset($data[4])) ? stripslashes(trim($data[4])) : '';
-$labels				 = (isset($data[5])) ? stripslashes(trim($data[5])) : '';
-$due 				 = (isset($data[6])) ? stripslashes(trim($data[6])) : '';
+$name 				 = (isset($data[2])) ? stripslashes(trim($data[2])) : 'Untitled card';
+$desc 				 = (isset($data[3])) ? stripslashes(trim($data[3])) : '';
+$labels				 = (isset($data[4])) ? stripslashes(trim($data[4])) : '';
+$due 				 = (isset($data[5])) ? stripslashes(trim($data[5])) : '';
+$list_name		         = (isset($data[6])) ? stripslashes(trim($data[6])) : '';
 $position			 = (isset($data[7])) ? stripslashes(trim($data[7])) : 'bottom';	
 $url				 = "{$trello_api_endpoint}/boards/{$trello_board_id}?lists=open&list_fields=name&fields=name,desc&key={$trello_key}&token={$trello_member_token}";
 
@@ -57,11 +58,11 @@ $trello_list_id = $lists[0]->id;
 		    CURLOPT_POSTFIELDS => http_build_query(array( // if you use an array without being wrapped in http_build_query, the Trello API server won't recognize your POST variables
 		        'key'    => $trello_key,
 		        'token'  => $trello_member_token,
-		        'idList' => $trello_list_id,
 		        'name'   => $name,
 		        'desc'   => $desc,
 		        'labels' => $labels,
 		        'due'	 => $due,
+		        'idList' => $trello_list_id,
 		        'pos'	 => $position
 		    )),
 		));
