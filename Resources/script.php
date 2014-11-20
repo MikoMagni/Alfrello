@@ -3,7 +3,7 @@
 /* ----------------------------------------------------------------------------------------------
 	Script: 	  Trello for Alfred
 	Author: 	  Tom Longo
-	Contributors: Miko Magni, cokeby190
+	Contributors:     Miko Magni, cokeby190
 	Usage:		  trello <Card name>;<Card description>;<Label>;<Due Date>;<List Name>   
 	Desc:		  Adds card to trello
 	Updated:	  20/11/14
