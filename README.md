@@ -44,7 +44,7 @@
 	
 	**Inbox** - List Name
 	
-        **Make sure not to have any spaces after each ;** 
+        Make sure not to have any spaces after each ;
 
 ---
 
