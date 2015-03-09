@@ -44,7 +44,7 @@
 	
 	**Inbox** - List Name
 
-* Make sure not to have any spaces after each **;** 
+*** Make sure not to have any spaces after each ; *** 
 	---
 
 *  Alternatively you can **select any text** and press "<b>Option + Command + t</b>" (or your custom hotkey) to create a card in Trello with the selected text.
