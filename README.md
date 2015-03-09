@@ -32,7 +32,7 @@
 
 * **trello card name; description**
         
-	Example: trello **Do work!; seriously, do work; red; 09/01/2015; Inbox**
+	Example: trello **Do work!;seriously, do work;red;09/01/2015;Inbox**
 
 	**Do work!** - Card title 
 
@@ -44,6 +44,7 @@
 	
 	**Inbox** - List Name
 
+* Make sure not to have any spaces after each **;** 
 	---
 
 *  Alternatively you can **select any text** and press "<b>Option + Command + t</b>" (or your custom hotkey) to create a card in Trello with the selected text.
