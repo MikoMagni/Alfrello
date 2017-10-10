@@ -83,7 +83,7 @@ if ($is_conn){
 
 		$result = curl_exec($ch);
 		$trello_card = json_decode($result);
-		echo ($trello_card->url) ? '"'.$name.'" added.' : 'ERROR ADDING CARD. your message was: '.$name.$desc.$labels;';
+		echo ($trello_card->url) ? '"'.$name.'" added.' : 'ERROR ADDING CARD. your message was: '.$name.$desc.$labels;
 
 	} else {
 		echo 'List not found';
