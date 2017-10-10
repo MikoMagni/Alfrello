@@ -1,12 +1,12 @@
 <?php
 
 /* ----------------------------------------------------------------------------------------------
-	Script: 	  Trello for Alfred
-	Author: 	  Tom Longo
-	Contributors:     Miko Magni, cokeby190
-	Usage:		  trello <Card name>;<Card description>;<Label>;<Due Date>;<List Name>   
-	Desc:		  Adds card to trello
-	Updated:	  20/11/14
+Script: 	  Trello for Alfred
+Author: 	  Tom Longo
+Contributors:     Miko Magni, cokeby190
+Usage:		  trello <Card name>;<Card description>;<Label>;<Due Date>;<List Name>
+Desc:		  Adds card to trello
+Updated:	  20/11/14
 ------------------------------------------------------------------------------------------------- */
 
 // API KEY: 1433c6977ccb78cd82e29a5455a24815
@@ -25,14 +25,14 @@ $desc 				 = (isset($data[3])) ? stripslashes(trim($data[3])) : '';
 $labels				 = (isset($data[4])) ? stripslashes(trim($data[4])) : '';
 $due 				 = (isset($data[5])) ? stripslashes(trim($data[5])) : '';
 $list_name		         = (isset($data[6])) ? stripslashes(trim($data[6])) : '';
-$position			 = (isset($data[7])) ? stripslashes(trim($data[7])) : 'bottom';	
+$position			 = (isset($data[7])) ? stripslashes(trim($data[7])) : 'bottom';
 $url				 = "{$trello_api_endpoint}/boards/{$trello_board_id}?lists=open&list_fields=name&fields=name,desc&key={$trello_key}&token={$trello_member_token}";
 
 $ch = curl_init();
 
 // Set query data here with the URL
-curl_setopt($ch, CURLOPT_URL, $url); 
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); 
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, '25');
 $content = trim(curl_exec($ch));
@@ -41,36 +41,54 @@ $board = json_decode($content);
 $lists = $board->lists;
 $trello_list_id = $lists[0]->id;
 
+function is_connected() {
+	$connected = @fsockopen("www.trello.com", 80);
+
+	if($connected) {
+		$is_conn = true; //action when connected
+		fclose($connected);
+		console.log('connected');
+	} else {
+		$is_conn = false; //action in connection failure
+		console.log('NOT connected');
+	}
+	return $is_conn;
+}
+
+if ($is_conn){
 	foreach($lists as $list) {
 		if($list->name == $list_name) {
 			$trello_list_id = $list->id;
 		}
 	}
 
-
 	if($trello_list_id) {
-	
+
 		$ch = curl_init("$trello_api_endpoint/cards");
 		curl_setopt_array($ch, array(
-		    CURLOPT_SSL_VERIFYPEER => false, // Probably won't work otherwise
-		    CURLOPT_RETURNTRANSFER => true, // So we can get the URL of the newly-created card
-		    CURLOPT_POST           => true,
-		    CURLOPT_POSTFIELDS => http_build_query(array( // if you use an array without being wrapped in http_build_query, the Trello API server won't recognize your POST variables
-		        'key'    => $trello_key,
-		        'token'  => $trello_member_token,
-		        'name'   => $name,
-		        'desc'   => $desc,
-		        'labels' => $labels,
-		        'due'	 => $due,
-		        'idList' => $trello_list_id,
-		        'pos'	 => $position
-		    )),
+			CURLOPT_SSL_VERIFYPEER => false, // Probably won't work otherwise
+			CURLOPT_RETURNTRANSFER => true, // So we can get the URL of the newly-created card
+			CURLOPT_POST           => true,
+			CURLOPT_POSTFIELDS => http_build_query(array( // if you use an array without being wrapped in http_build_query, the Trello API server won't recognize your POST variables
+				'key'    => $trello_key,
+				'token'  => $trello_member_token,
+				'name'   => $name,
+				'desc'   => $desc,
+				'labels' => $labels,
+				'due'	 => $due,
+				'idList' => $trello_list_id,
+				'pos'	 => $position
+			)),
 		));
-		
+
 		$result = curl_exec($ch);
 		$trello_card = json_decode($result);
-		echo ($trello_card->url) ? '"'.$name.'" added.' : 'Error adding card.';
-	
+		echo ($trello_card->url) ? '"'.$name.'" added.' : 'ERROR ADDING CARD. your message was: '.$name.$desc.$labels;
+
 	} else {
 		echo 'List not found';
 	}
+
+} else {
+	echo 'ERROR: NO NETWORK CONNECTION, your message was: '.$name.$desc.$labels;
+}
