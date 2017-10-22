@@ -76,5 +76,5 @@ if(@fsockopen('www.google.com',80,$errorNum,$errorMessage)) {
 	}
 
 } else {
-	echo 'ERROR: NO NETWORK CONNECTION, your message was: '.$name.$desc.$labels;
+	echo 'ERROR: NO NETWORK CONNECTION, your message was: '.$name.$desc.$labels.' ERROR: '.$errorNum,$errorMessage;
 }
