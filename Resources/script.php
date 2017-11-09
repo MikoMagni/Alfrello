@@ -41,21 +41,7 @@ $board = json_decode($content);
 $lists = $board->lists;
 $trello_list_id = $lists[0]->id;
 
-function is_connected() {
-	$connected = @fsockopen("www.trello.com", 80);
-
-	if($connected) {
-		$is_conn = true; //action when connected
-		fclose($connected);
-		console.log('connected');
-	} else {
-		$is_conn = false; //action in connection failure
-		console.log('NOT connected');
-	}
-	return $is_conn;
-}
-
-if ($is_conn){
+if(@fsockopen('www.google.com',80,$errorNum,$errorMessage)) {
 	foreach($lists as $list) {
 		if($list->name == $list_name) {
 			$trello_list_id = $list->id;
@@ -90,5 +76,5 @@ if ($is_conn){
 	}
 
 } else {
-	echo 'ERROR: NO NETWORK CONNECTION, your message was: '.$name.$desc.$labels;
+	echo 'ERROR: NO NETWORK CONNECTION, your message was: '.$name.$desc.$labels.' ERROR: '.$errorNum,$errorMessage;
 }
