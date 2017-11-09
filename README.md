@@ -8,9 +8,9 @@
 
 ---
 
-![image](https://dl.dropbox.com/u/695443/alfredfortrello/alfred.png)
-![image](https://dl.dropbox.com/u/695443/alfredfortrello/notification.png)
-![image](https://dl.dropbox.com/u/695443/alfredfortrello/trello.png)
+![image](https://www.dropbox.com/s/trtwkm1dtzpuwb8/alfred.png)
+![image](https://www.dropbox.com/s/t0uotwizpkzgh37/notification.png)
+![image](https://www.dropbox.com/s/h0aky0ycx2uz627/trello.png)
 
 <br>
 
