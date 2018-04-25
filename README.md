@@ -5,8 +5,6 @@
 
 [![](https://user-images.githubusercontent.com/2527231/39227510-2f4f80b8-4898-11e8-8e7f-89f5340c8c40.png)](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/releases/tag/1.6)
 
-
-<br>
 ## Install
 
 1. Double click on the "**Trello Worklfow for Alfred v.1.6**" workflow that you have just downloaded.  
@@ -47,7 +45,7 @@ You can get the board id by simply going to your board and add .json at the end 
  **Example:** Go to the Trello developmemt Roadmap Board [https://trello.com/b/nC8QJJoZ/trello-development-roadmap](https://trello.com/b/nC8QJJoZ/trello-development-roadmap). To view the board id add .json at the end of the URL [https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json](https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json). You should now see the full JSON
 >{"id":"**4d5ea62fd76aa1136000000c**","name":"Trello Development Roadmap","desc":"","descData"
 
-	The board id in the example is: **4d5ea62fd76aa1136000000c**<br>
+The board id in the example is: **4d5ea62fd76aa1136000000c**  
 
 7. Open the Trello Workflow for Alfred in Alfred app. Use the Keyword **Alfred** to 
 Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Alfred v1.6 from the side column. 
@@ -76,7 +74,7 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
 ![](https://user-images.githubusercontent.com/2527231/39163922-f2d0f252-47bb-11e8-9bba-4b537528bd27.png)
 
 
- ###Basic Usage  
+ ## Basic Usage  
  
  
  **Card Title**  
@@ -130,7 +128,7 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
 
 **Due Date**  
  
-`trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018``
+`trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018`
 
 will create a card on your board on the first list with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
 The due date will be set as 04/26/2018  
@@ -141,7 +139,7 @@ The due date will be set as 04/26/2018
 
 **List Name**  
  
-`trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today ``
+`trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today `
 
 will create a card on your board on the list **Today** with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
 The due date will be set as 04/26/2018.
@@ -157,7 +155,7 @@ The example will only work if you have a list named Today, otherwise the card wi
 
 **Card Position**  
  
-`trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today; top``
+`trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today; top`
 
 will create a card on your board on the list **Today** with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
 The due date will be set as 04/26/2018.  
@@ -179,7 +177,7 @@ Note: If you don't specify a card position, your new card will automatically be 
 ![](https://user-images.githubusercontent.com/2527231/39226985-283cb2bc-4895-11e8-9939-1a4bcdb8525d.png)
 
 
-###Advanced Usage  
+## Advanced Usage  
 
 You can skip any of the avaible fields by simply adding **;**  
 
@@ -206,7 +204,7 @@ Or a card with title only but on a different list
 ![](https://user-images.githubusercontent.com/2527231/39227333-3f9a37a2-4897-11e8-81ae-7089f22153a6.png)  
 
 
-###FAQ  
+## FAQ  
 
 Coming soon
 
