@@ -30,7 +30,7 @@ Use the keyword "**get trello token**" plus your "**API Key**" to authorize the 
 
     Example: **get trello token 00000000000000000000**  
     More information: [https://developers.trello.com/docs/api-introduction](https://developers.trello.com/docs/api-introduction)<br>
-![](https://user-images.githubusercontent.com/2527231/39163856-985ceaba-47bb-11e8-8746-7025738f604f.png)
+![](https://user-images.githubusercontent.com/2527231/39280550-2a5bdb0e-493f-11e8-96de-81a64ce5cf17.png)
 
 4. **Allow** Trello Workflow to use your account  
 
