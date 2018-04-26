@@ -79,7 +79,9 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
  
  **Card Title**  
  
- `trello make dinner reservation`  
+ ```
+ trello make dinner reservation
+ ```  
  
  will create a card on your board on the first list with the title "make dinner reservation"
 
@@ -89,7 +91,9 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
  
  **Card Description**  
  
- `trello make dinner reservation; table for 10 people at around 7:30pm`  
+ ```
+ trello make dinner reservation; table for 10 people at around 7:30pm
+ ```
  
  will create a card on your board on the first list with the title "make dinner reservation" and description "table for 10 people at around 7:30pm"
  
@@ -99,7 +103,9 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
  
  **Labels**  
  
- `trello make dinner reservation; table for 10 people at around 7:30pm; blue` 
+ ```
+ trello make dinner reservation; table for 10 people at around 7:30pm; blue
+ ```
  
  will create a card on your board on the first list with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label  
  
@@ -114,7 +120,9 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
 
  You can add more than one label by comma separating them.
  
- `trello make dinner reservation; table for 10 people at around 7:30pm; blue,red,yellow`
+ ```
+ trello make dinner reservation; table for 10 people at around 7:30pm; blue,red,yellow
+ ```
  
  Please note: Make sure not to have spaces between comma separated labels.  
  Custom labels are not supported. If you find a way let me know :)  
@@ -128,7 +136,9 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
 
 **Due Date**  
  
-`trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018`
+```
+trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018
+```
 
 will create a card on your board on the first list with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
 The due date will be set as 04/26/2018  
@@ -139,7 +149,9 @@ The due date will be set as 04/26/2018
 
 **List Name**  
  
-`trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today `
+```
+trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today
+```
 
 will create a card on your board on the list **Today** with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
 The due date will be set as 04/26/2018.
@@ -155,7 +167,9 @@ The example will only work if you have a list named Today, otherwise the card wi
 
 **Card Position**  
  
-`trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today; top`
+```
+trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today; top
+```
 
 will create a card on your board on the list **Today** with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
 The due date will be set as 04/26/2018.  
@@ -187,7 +201,9 @@ For example if I wanted to post a card with Title, Label and a Due date i would 
 
 **{Card Title}; ; {Labels}; {Due Date}**
 
-`trello Clean my car; ; red; 04/29/2018`  
+```
+trello Clean my car; ; red; 04/29/2018
+```
 
 ![](https://user-images.githubusercontent.com/2527231/39227249-c4188d86-4896-11e8-9697-eff35768b368.png)  
 
@@ -197,7 +213,9 @@ Or a card with title only but on a different list
 
 **{Card Title}; ; ; ; {List Name}**  
 
-`trello Clean my car; ; ; ; Upcoming`  
+```
+trello Clean my car; ; ; ; Upcoming
+```  
 
 ![](https://user-images.githubusercontent.com/2527231/39227342-4c118abc-4897-11e8-9486-4f008fd8fbd5.png)  
 
@@ -209,3 +227,6 @@ Or a card with title only but on a different list
 Coming soon
 
  
+## License
+
+[MIT](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/blob/master/MIT%20License) © Miko Magni
