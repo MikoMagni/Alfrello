@@ -8,9 +8,9 @@
 ## Install
 
 1. Double click on the "**Trello Worklfow for Alfred v.1.6**" workflow that you have just downloaded.  
-More info: [https://www.alfredapp.com/help/workflows/](https://www.alfredapp.com/help/workflows/)   
+More info: [https://www.alfredapp.com/help/workflows/](https://www.alfredapp.com/help/workflows/)  
 
- Note: if you have version 1.5 installed, remove it before installing the new version.
+    Note: if you have version 1.5 installed, remove it before installing the new version.
    
 
 
@@ -20,7 +20,7 @@ More info: [https://www.alfredapp.com/help/workflows/](https://www.alfredapp.com
 Use the keyword "**get trello key**" to generate your Trello Developer API Key.<br>
 More information: [https://developers.trello.com/docs/api-introduction](https://developers.trello.com/docs/api-introduction).  
 
- **Note:** Make sure to be logged in Trello in your default browser before generating your API Key.  
+    **Note:** Make sure to be logged in Trello in your default browser before generating your API Key.  
 ![](https://user-images.githubusercontent.com/2527231/39163817-68b8092a-47bb-11e8-939e-62cdfff3ed3b.png)
 
 2. Copy your **API Key**
@@ -28,8 +28,8 @@ More information: [https://developers.trello.com/docs/api-introduction](https://
 3. **Authorize Trello Workflow**  
 Use the keyword "**get trello token**" plus your "**API Key**" to authorize the Trello Workflow to use your Trello account  
 
- Example: **get trello token 00000000000000000000**  
-More information: [https://developers.trello.com/docs/api-introduction](https://developers.trello.com/docs/api-introduction)<br>
+    Example: **get trello token 00000000000000000000**  
+    More information: [https://developers.trello.com/docs/api-introduction](https://developers.trello.com/docs/api-introduction)<br>
 ![](https://user-images.githubusercontent.com/2527231/39163856-985ceaba-47bb-11e8-8746-7025738f604f.png)
 
 4. **Allow** Trello Workflow to use your account  
@@ -42,10 +42,10 @@ More information: [https://developers.trello.com/docs/api-introduction](https://
 Choose the Trello board that you wish to use with Trello Workflow and copy the **board id**  
 You can get the board id by simply going to your board and add .json at the end of the URL.  
 
- **Example:** Go to the Trello developmemt Roadmap Board [https://trello.com/b/nC8QJJoZ/trello-development-roadmap](https://trello.com/b/nC8QJJoZ/trello-development-roadmap). To view the board id add .json at the end of the URL [https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json](https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json). You should now see the full JSON
->{"id":"**4d5ea62fd76aa1136000000c**","name":"Trello Development Roadmap","desc":"","descData"
+     **Example:** Go to the Trello developmemt Roadmap Board [https://trello.com/b/nC8QJJoZ/trello-development-roadmap](https://trello.com/b/nC8QJJoZ/trello-development-roadmap). To view the board id add .json at the end of the URL [https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json](https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json). You should now see the full JSON
+    >{"id":"**4d5ea62fd76aa1136000000c**","name":"Trello Development Roadmap","desc":"","descData"
 
-The board id in the example is: **4d5ea62fd76aa1136000000c**  
+    The board id in the example is: **4d5ea62fd76aa1136000000c**  
 
 7. Open the Trello Workflow for Alfred in Alfred app. Use the Keyword **Alfred** to 
 Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Alfred v1.6 from the side column. 
@@ -68,9 +68,9 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
 
 1. General usage **trello** **{field}** separate fields using **;**  
 
-  You can choose to have spaces or not between fields. For example **{field1}; {field2}** and **{field1};{field2}** will work.  
+      You can choose to have spaces or not between fields. For example **{field1}; {field2}** and **{field1};{field2}** will work.  
     
-  Available fields: **{Card Title}; {Card Description}; {Labels}; {Due Date}; {List Name}; {Card Position}** 
+      Available fields: **{Card Title}; {Card Description}; {Labels}; {Due Date}; {List Name}; {Card Position}** 
 ![](https://user-images.githubusercontent.com/2527231/39163922-f2d0f252-47bb-11e8-9bba-4b537528bd27.png)
 
 
@@ -104,7 +104,7 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
  will create a card on your board on the first list with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label  
  
  **Available Labels**  
- - **all** (will add green, yellow, organe, red, purple and blue)
+ - **all** (will add green, yellow, orange, red, purple and blue)
  - **green**
  - **yellow**
  - **orange**
@@ -179,7 +179,7 @@ Note: If you don't specify a card position, your new card will automatically be 
 
 ## Advanced Usage  
 
-You can skip any of the avaible fields by simply adding **;**  
+You can skip any of the available fields by simply adding **;**  
 
 **{Card Title}; {Card Description}; {Labels}; {Due Date}; {List Name}; {Card Position}**
 
