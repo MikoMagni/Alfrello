@@ -57,7 +57,14 @@ Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Al
 	> key='**{YourAPIKey}**'  
 	> token='**{YourPersonalToken}**'  
 	> boardid='**{YourBoardId}**'  
-
+	
+	Make sure that each preference in the bash file is within single quotes:
+	
+	> key='00000000000'   
+	> token='0000000000000000000000000000000'  
+	> boardid='0000000' 
+	
+	
 	Click **Save**  
 
 	![](https://user-images.githubusercontent.com/2527231/39165568-388c8448-47c4-11e8-9864-fc32d2eaf9ad.png)
