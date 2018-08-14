@@ -9,40 +9,41 @@
     |_|_|  \___|_|_|\___/      \/  \/ \___/|_|  |_|\_\_| |_|\___/ \_/\_/  
                                                                           
                                                                           
-Script: 	   		Trello Workflow for Alfred
-Version:        		1.6
-Author: 	    		@mikomagni @tomlongo 
-Contributors:   		@cokeby190 @cheryl @deanishe
-Desc:		    		Adds card to Trello
-Updated:	    		24/04/18
-Source: 			https://github.com/MikoMagni/Trello-Workflow-for-Alfred
+Script: 	    Trello Workflow for Alfred
+Version:        1.6
+Author: 	    @mikomagni & @tomlonngo 
+Contributors:   @cokeby190 & @cheryl
+Usage:		    trello <Card name>;<Card description>;<Label>;<Due Date>;<List Name>;<Card Position>
+Desc:		    Adds card to Trello
+Updated:	    24/04/18
+Source: 		https://github.com/MikoMagni/Trello-Workflow-for-Alfred
 
 */
 
-$trello_api_endpoint 		= 'https://api.trello.com/1';
+$trello_api_endpoint 	= 'https://api.trello.com/1';
 $trello_list_id 		= false;
-$data 				= explode(";", $argv[1]);
+$data 					= explode(";", $argv[1]);
 $trello_key 			= $data[0];
 $trello_token 			= $data[1];
 $trello_board_id 		= $data[2];
-$name 				= (isset($data[3])) ? stripslashes(trim($data[3])) : '';
-$desc 				= (isset($data[4])) ? stripslashes(trim($data[4])) : '';
-$labels 			= (isset($data[5])) ? stripslashes(trim($data[5])) : '';
-$due 				= (isset($data[6])) ? stripslashes(trim($data[6])) : '';
-$list_name			= (isset($data[7])) ? stripslashes(trim($data[7])) : '';
-$position 			= (isset($data[8])) ? stripslashes(trim($data[8])) : 'bottom';
-$url 				= "{$trello_api_endpoint}/boards/{$trello_board_id}?lists=open&list_fields=name&fields=name,desc&key={$trello_key}&token={$trello_token}";
+$name 					= (isset($data[3])) ? stripslashes(trim($data[3])) : '';
+$desc 					= (isset($data[4])) ? stripslashes(trim($data[4])) : '';
+$labels 				= (isset($data[5])) ? stripslashes(trim($data[5])) : (getenv('trello.label') ?: '');
+$due 					= (isset($data[6])) ? stripslashes(trim($data[6])) : (getenv('trello.due') ?: '');
+$list_name 				= (isset($data[7])) ? stripslashes(trim($data[7])) : (getenv('trello.list_name') ?: '') ;
+$position 				= (isset($data[8])) ? stripslashes(trim($data[8])) : (getenv('trello.position') ?: 'bottom');
+$url 					= "{$trello_api_endpoint}/boards/{$trello_board_id}?lists=open&list_fields=name&fields=name,desc&key={$trello_key}&token={$trello_token}";
 
-$ch 				= curl_init();
+$ch 					= curl_init();
 
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, '25');
-$content 			= trim(curl_exec($ch));
+$content 				= trim(curl_exec($ch));
 curl_close($ch);
-$board 				= json_decode($content);
-$lists 				= $board->lists;
+$board 					= json_decode($content);
+$lists 					= $board->lists;
 $trello_list_id 		= $lists[0]->id;
 
 if (@fsockopen('duckduckgo.com', 80)) {
