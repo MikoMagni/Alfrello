@@ -1,13 +1,14 @@
 
 
 # Trello Workflow for Alfred App v.1.6.1 
+
 ### Create cards in Trello using Alfred App [https://www.alfredapp.com/](https://www.alfredapp.com/)
 
-[![](https://user-images.githubusercontent.com/2527231/39227510-2f4f80b8-4898-11e8-8e7f-89f5340c8c40.png)](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/releases/tag/v1.6)
+### [Download Trello WorkFlow 1.6.1](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/releases/tag/v1.6.1)
 
 ## Install
 
-1. Double click on the "**Trello Worklfow for Alfred v.1.6**" workflow that you have just downloaded.  
+1. Double click on the "**Trello Worklfow for Alfred v.1.6.1**" workflow that you have just downloaded.  
 More info: [https://www.alfredapp.com/help/workflows/](https://www.alfredapp.com/help/workflows/)  
 
     Note: if you have version 1.5 installed, remove it before installing the new version.
@@ -227,6 +228,19 @@ trello Clean my car; ; ; ; Upcoming
 ![](https://user-images.githubusercontent.com/2527231/39227342-4c118abc-4897-11e8-9486-4f008fd8fbd5.png)  
 
 ![](https://user-images.githubusercontent.com/2527231/39227333-3f9a37a2-4897-11e8-81ae-7089f22153a6.png)  
+
+
+## Environment Variables by @gamell
+
+Given that some might want always to create the cards on the same list, or with the same label, or same due date, or same position _by default_, I added the ability to set those defaults via the environment variables `trello.list_name`, `trello.label`, `trello.due` and `trello.position`.
+
+One can conveniently add or edit those environment variables without programming knowledge through the Alfred Workflow editor, clicking on the `[x]` button on the top right (see screenshot below). 
+
+*Note:* If you don't set the variable, the workflow will behave as it did before.
+
+![](https://user-images.githubusercontent.com/2460215/44072791-96f57f66-9f45-11e8-9dbc-399744c5c34c.png)
+
+![](https://user-images.githubusercontent.com/2460215/44072799-9d4107b4-9f45-11e8-9444-4d71f7f8135f.png)
 
 
 ## FAQ  

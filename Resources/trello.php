@@ -14,7 +14,7 @@ Version:        		1.6.1
 Author: 	    		@mikomagni @tomlongo 
 Contributors:   		@cokeby190 @cheryl @deanishe @gamell 
 Desc:		    		Adds card to Trello
-Updated:	    		24/04/18
+Updated:	    		16/07/18
 Source: 			https://github.com/MikoMagni/Trello-Workflow-for-Alfred
 
 */
