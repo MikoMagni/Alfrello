@@ -8,7 +8,7 @@
 
 ## Install
 
-1. Double click on the "**Trello Worklfow for Alfred v.1.6.1**" workflow that you have just downloaded.  
+1. Double click on the "**Trello Workflow for Alfred v.1.6.1**" workflow that you have just downloaded.  
 More info: [https://www.alfredapp.com/help/workflows/](https://www.alfredapp.com/help/workflows/)  
 
     Note: if you have version 1.5 installed, remove it before installing the new version.
