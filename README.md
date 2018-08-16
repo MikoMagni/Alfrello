@@ -4,7 +4,7 @@
 
 ### Create cards in Trello using Alfred App [https://www.alfredapp.com/](https://www.alfredapp.com/)
 
-### [Download Trello WorkFlow 1.6.1](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/releases/tag/v1.6.1)
+### [Download Trello WorkFlow 1.6.1](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/releases/tag/1.6.1)
 
 ## Install
 
