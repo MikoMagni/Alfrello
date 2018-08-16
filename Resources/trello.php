@@ -10,7 +10,7 @@
                                                                           
                                                                           
 Script: 	   		Trello Workflow for Alfred
-Version:        		1.6
+Version:        		1.6.1
 Author: 	    		@mikomagni @tomlongo 
 Contributors:   		@cokeby190 @cheryl @deanishe @gamell 
 Desc:		    		Adds card to Trello
