@@ -6,6 +6,8 @@
 
 ### [Download Trello WorkFlow 1.6.1](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/releases/tag/1.6.1)
 
+#### Tested and working with Alfred 4.0.x
+
 ## Install
 
 1. Double click on the "**Trello Workflow for Alfred v.1.6.1**" workflow that you have just downloaded.  
