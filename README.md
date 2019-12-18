@@ -1,16 +1,16 @@
 
 
-# Trello Workflow for Alfred App v.1.6.1 
+# Trello Workflow for Alfred App v.1.6.2
 
 ### Create cards in Trello using Alfred App [https://www.alfredapp.com/](https://www.alfredapp.com/)
 
-### [Download Trello WorkFlow 1.6.1](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/releases/tag/1.6.1)
+### [Download Trello WorkFlow 1.6.2](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/releases/tag/1.6.2)
 
 #### Tested and working with Alfred 4.0.x
 
 ## Install
 
-1. Double click on the "**Trello Workflow for Alfred v.1.6.1**" workflow that you have just downloaded.  
+1. Double click on the "**Trello Workflow for Alfred v.1.6.2**" workflow that you have just downloaded.  
 More info: [https://www.alfredapp.com/help/workflows/](https://www.alfredapp.com/help/workflows/)  
 
     Note: if you have version 1.5 installed, remove it before installing the new version.
@@ -200,12 +200,26 @@ Note: If you don't specify a card position, your new card will automatically be 
 
 ![](https://user-images.githubusercontent.com/2527231/39226985-283cb2bc-4895-11e8-9939-1a4bcdb8525d.png)
 
+**URL Attachment**
 
+```
+trello make dinner reservation; table for 10 people at around 7:30pm; blue; 12/24/2019; Today; top; https://myfavoriterestaurant.com
+```
+
+will create a card on your board on the list **Today** with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
+The due date will be set as 12/24/2019.  
+The URL `https://myfavoriterestaurant.com` is added as an attachment.
+
+![](https://user-images.githubusercontent.com/7596032/71087131-68196980-2169-11ea-85b1-5d1658e00db3.png)
+
+![](https://user-images.githubusercontent.com/7596032/71087140-7071a480-2169-11ea-92a3-ce553316bcf5.png)
+
+![](https://user-images.githubusercontent.com/7596032/71087148-749dc200-2169-11ea-9031-329183f793c9.png)
 ## Advanced Usage  
 
 You can skip any of the available fields by simply adding **;**  
 
-**{Card Title}; {Card Description}; {Labels}; {Due Date}; {List Name}; {Card Position}**
+**{Card Title}; {Card Description}; {Labels}; {Due Date}; {List Name}; {Card Position}; {URL Attachment}**
 
 For example if I wanted to post a card with Title, Label and a Due date i would use this syntax
 

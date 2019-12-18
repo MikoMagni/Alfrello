@@ -10,11 +10,11 @@
                                                                           
                                                                           
 Script: 	   		Trello Workflow for Alfred
-Version:        		1.6.1
+Version:        		1.6.2
 Author: 	    		@mikomagni @tomlongo 
-Contributors:   		@cokeby190 @cheryl @deanishe @gamell 
+Contributors:   		@cokeby190 @cheryl @deanishe @gamell @geojunkie
 Desc:		    		Adds card to Trello
-Updated:	    		16/07/18
+Updated:	    		18/12/19
 Source: 			https://github.com/MikoMagni/Trello-Workflow-for-Alfred
 
 */
@@ -31,6 +31,7 @@ $labels 			= (isset($data[5])) ? stripslashes(trim($data[5])) : (getenv('trello.
 $due 				= (isset($data[6])) ? stripslashes(trim($data[6])) : (getenv('trello.due') ?: '');
 $list_name 			= (isset($data[7])) ? stripslashes(trim($data[7])) : (getenv('trello.list_name') ?: '') ;
 $position 			= (isset($data[8])) ? stripslashes(trim($data[8])) : (getenv('trello.position') ?: 'bottom');
+$url_attachment		= (isset($data[9])) ? stripslashes(trim($data[9])) : '';
 $url 				= "{$trello_api_endpoint}/boards/{$trello_board_id}?lists=open&list_fields=name&fields=name,desc&key={$trello_key}&token={$trello_token}";
 
 $ch 				= curl_init();
@@ -66,7 +67,8 @@ if (@fsockopen('duckduckgo.com', 80)) {
 				'labels' => $labels,
 				'due' => $due,
 				'idList' => $trello_list_id,
-				'pos' => $position
+				'pos' => $position,
+				'urlSource' => $url_attachment
 			)) ,
 		));
 		$result = curl_exec($ch);
