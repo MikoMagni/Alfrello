@@ -210,13 +210,16 @@ will create a card on your board on the list **Today** with the title "make dinn
 The due date will be set as 12/24/2019.  
 The URL `https://myfavoriterestaurant.com` is added as an attachment.
 
-**SCREENSHOTS PENDING**
+![](https://user-images.githubusercontent.com/7596032/71087131-68196980-2169-11ea-85b1-5d1658e00db3.png)
 
+![](https://user-images.githubusercontent.com/7596032/71087140-7071a480-2169-11ea-92a3-ce553316bcf5.png)
+
+![](https://user-images.githubusercontent.com/7596032/71087148-749dc200-2169-11ea-9031-329183f793c9.png)
 ## Advanced Usage  
 
 You can skip any of the available fields by simply adding **;**  
 
-**{Card Title}; {Card Description}; {Labels}; {Due Date}; {List Name}; {Card Position}**
+**{Card Title}; {Card Description}; {Labels}; {Due Date}; {List Name}; {Card Position}; {URL Attachment}**
 
 For example if I wanted to post a card with Title, Label and a Due date i would use this syntax
 
