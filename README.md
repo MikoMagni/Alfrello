@@ -1,268 +1,337 @@
+```
+  █████╗ ██╗     ███████╗██████╗ ███████╗██╗     ██╗      ██████╗    ██████████╗ 
+ ██╔══██╗██║     ██╔════╝██╔══██╗██╔════╝██║     ██║     ██╔═══██╗   ██╔═██╔═██║ 
+ ███████║██║     █████╗  ██████╔╝█████╗  ██║     ██║     ██║   ██║   ██║ ██║ ██║ 
+ ██╔══██║██║     ██╔══╝  ██╔══██╗██╔══╝  ██║     ██║     ██║   ██║   ██║ ██████║
+ ██║  ██║███████╗██║     ██║  ██║███████╗███████╗███████╗╚██████╔╝   ██████████║
+ ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝    ╚═════════╝
+```
+
+```
+Alfred Workflow for creating cards on a Trello board
+```
+
+## What's New
+- `NEW` Made for Alfred 5.1 
+- `NEW` Support for all Trello Labels and Custom Labels
+- `NEW` Assign a card to yourself and or other members
+- `NEW` Use natural language for due dates. Use terms like 'today', 'tomorrow', or 'next week'.
+- `NEW` Pick your Date format (m/d/Y or d/m/Y)
+- `NEW` Personalise the workflow and rearrange all fields based on how you use Trello! 
+- `NEW` Use default overwrites so you don't have to type the same fields repeatedly.
+- `NEW` All settings are managed within the Workflow configuration 
+- `NEW` Enable the Debug Log to see and record helpful error messages into log.txt
+- `NEW` Path overwrite
+
+## How To Install
+
+1. Download the latest `Alfrello Workflow` from the [release page](https://github.com/MikoMagni/Alfrello/releases).
+2. Double-click on the `Alfrello Workflow` to install it in Alfred
+
+> More information on installing Workflows in Alfred [here](https://www.alfredapp.com/help/workflows/#discovering).
+
+## Alfrello Setup
+
+### Trello API key
+-  Type into Alfred `get trello api key` to generate your unique Trello API key.
+
+> More information [here](https://developers.trello.com/docs/api-introduction).  
+> Note Make sure to be logged in to Trello in your default browser before generating your API Key.  
+
+![](images/get_api_key.png)
+
+-  Copy your unique `Trello API key` to your clipboard
+
+-  Open the `Configure Workflow`
+
+![](images/configure_api.png)
+
+- Paste your `API Key` here:
+
+![](images/api_key_setting.png)
+ 
+ 
+ 
+### Trello Token
+
+-  After entering your `api key`, type `get token` in Alfred to authorise Alfrello to access your Trello data and perform actions like creating cards. 
+
+![](images/get_token.png)
+
+> More information [here](https://developers.trello.com/docs/api-introduction).<br>
 
 
-# Trello Workflow for Alfred App v.1.6.2
+- Copy your `token`
 
-### Create cards in Trello using Alfred App [https://www.alfredapp.com/](https://www.alfredapp.com/)
+- Open the `Configure Workflow` and paste your `token` here:
 
-### [Download Trello WorkFlow 1.6.2](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/releases/tag/1.6.2)
-
-#### Tested and working with Alfred 5.x
-
-## Install
-
-1. Double click on the "**Trello Workflow for Alfred v.1.6.2**" workflow that you have just downloaded.  
-More info: [https://www.alfredapp.com/help/workflows/](https://www.alfredapp.com/help/workflows/)  
-
-    Note: if you have version 1.5 installed, remove it before installing the new version.
-   
+![](images/token_setting.png)
 
 
-## Setup
+### Trello Board id 
 
-1. **Generate your Trello Developer API Key**<br> 
-Use the keyword "**get trello key**" to generate your Trello Developer API Key.<br>
-More information: [https://developers.trello.com/docs/api-introduction](https://developers.trello.com/docs/api-introduction).  
+Choose the Trello board that you wish to use with Alfrello and copy the `board id`  
+You can get the `board id` by simply going to your board and adding `.json` at the end of the URL.  
 
-    **Note:** Make sure to be logged in Trello in your default browser before generating your API Key.  
-![](https://user-images.githubusercontent.com/2527231/39163817-68b8092a-47bb-11e8-939e-62cdfff3ed3b.png)
+- Open the `Configure Workflow` and paste your `board id` here:
 
-2. Copy your **API Key**
+![](images/boardid_setting.png)
 
-3. **Authorize Trello Workflow**  
-Use the keyword "**get trello token**" plus your "**API Key**" to authorize the Trello Workflow to use your Trello account  
-
-    Example: **get trello token 00000000000000000000**  
-    More information: [https://developers.trello.com/docs/api-introduction](https://developers.trello.com/docs/api-introduction)<br>
-![](https://user-images.githubusercontent.com/2527231/39280550-2a5bdb0e-493f-11e8-96de-81a64ce5cf17.png)
-
-4. **Allow** Trello Workflow to use your account  
-
-     ![](https://user-images.githubusercontent.com/2527231/39164571-364a56b0-47bf-11e8-92f3-3c2a08fd04e9.png)
-
-5. Copy your **Token**
-
-6. **Your Trello board id**  
-Choose the Trello board that you wish to use with Trello Workflow and copy the **board id**  
-You can get the board id by simply going to your board and add .json at the end of the URL.  
-
-     **Example:** Go to the Trello developmemt Roadmap Board [https://trello.com/b/nC8QJJoZ/trello-development-roadmap](https://trello.com/b/nC8QJJoZ/trello-development-roadmap). To view the board id add .json at the end of the URL [https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json](https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json). You should now see the full JSON
-    >{"id":"**4d5ea62fd76aa1136000000c**","name":"Trello Development Roadmap","desc":"","descData"
-
-    The board id in the example is: **4d5ea62fd76aa1136000000c**  
-
-7. Open the Trello Workflow for Alfred in Alfred app. Use the Keyword **Alfred** to 
-Show Alfred Preferences. Navigate to Workflows and select Trello Workflow for Alfred v1.6 from the side column. 
-
-	![](https://user-images.githubusercontent.com/2527231/39165421-86508e96-47c3-11e8-8f90-f06bc0a6727f.png)  
-
-8. Double click on the **/bin/bash** script and enter your **API Key**, **Your Token** and your **board id** here:  
-
-	> key='**{YourAPIKey}**'  
-	> token='**{YourPersonalToken}**'  
-	> boardid='**{YourBoardId}**'  
-	
-	Make sure that each preference in the bash file is within single quotes:
-	
-	> key='00000000000'   
-	> token='0000000000000000000000000000000'  
-	> boardid='0000000' 
-	
-	
-	Click **Save**  
-
-	![](https://user-images.githubusercontent.com/2527231/39165568-388c8448-47c4-11e8-9864-fc32d2eaf9ad.png)
-
+> For example, go to the Trello development Roadmap Board [https://trello.com/b/nC8QJJoZ/trello-development-roadmap](https://trello.com/b/nC8QJJoZ/trello-development-roadmap).<br> 
+> To view the `board id` add .json at the end of the URL [https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json](https://trello.com/b/nC8QJJoZ/trello-development-roadmap.json)<br>
+> The Trello development Roadmap board id is `4d5ea62fd76aa1136000000c`
 
 
 ## Usage
 
-1. General usage **trello** **{field}** separate fields using **;**  
+### General Usage
 
-      You can choose to have spaces or not between fields. For example **{field1}; {field2}** and **{field1};{field2}** will work.  
-    
-      Available fields: **{Card Title}; {Card Description}; {Labels}; {Due Date}; {List Name}; {Card Position}** 
-![](https://user-images.githubusercontent.com/2527231/39163922-f2d0f252-47bb-11e8-9bba-4b537528bd27.png)
+1. Launch Alfred App.
+2. Enter the workflow keyword that triggers this workflow (The default is `trello`, but you can change it in the `Configure Workflow`).
+3. Write the fields you want to specify for your Trello card, separating each field with a semicolon `;`.
+
+The syntax looks like this: `keyword {field1};{field2};{field3};....`
+
+For example, if the keyword is `trello`, a new Trello card with the title "Plan Meeting", description "Meeting with Team", no labels, due tomorrow, in the list "Upcoming", at the top position, with an attachment and assigned to a member, would look like this:
+
+`trello Plan Meeting; Meeting with Team;; tomorrow; Upcoming; top; https://example.com; @username`
+
+> Note that we left the Labels field blank because we don't want to specify any labels.
+
+Spaces between fields and the semicolons are optional. Both keyword `{field1}; {field2}` and keyword `{field1};{field2}` formats will work.
+
+### Available fields
+
+1. `Card Title`: The title of the new card.
+2. `Card Description`: The description for the new card.
+3. `Labels`: The labels you want to apply to the card. If you want to apply multiple labels, separate them by commas (,) within this field.
+4. `Due Date`: The due date for the card. This can be an exact date or a relative date like 'today', 'tomorrow', or 'next week'.
+5. `List Name`: The name of the list where you want to add the new card.
+6. `Card Position`: Where you want the card to appear within the list. Options are `top` or `bottom`.
+7. `Attachment URL`: If you want to attach a URL to the card, add it here.
+8. `Assigned Member`: To assign a member to the card, input their username. It can be prefixed with an `@` sign, or you can type the username. You can also use `me` to assign a card to yourself.
+
+### Fields order
+
+In the Alfrello workflow configuration, you have the ability to customise the order of your query fields. This allows you to define a default sequence in which you input your card's data, making the workflow better suit your personal habits or preferences.
+
+By default, the order is set as: 
+
+```
+name,desc,input_labels,due,list_name,position,url_attachment,assigned_member
+```
+ 
+This represents the Card Title, Card Description, Labels, Due Date, List Name, Card Position, Attachment URL, and Assigned Member.
+
+If you'd prefer to input your data in a different sequence, you can rearrange these fields in the `Trello Field Order` variable in the Workflow configuration. Just make sure that a comma separates each field.
 
 
- ## Basic Usage  
- 
- 
- **Card Title**  
- 
- ```
- trello make dinner reservation
- ```  
- 
- will create a card on your board on the first list with the title "make dinner reservation"
+![](images/fields_order.png)
 
- ![sdsd](https://user-images.githubusercontent.com/2527231/39225051-73d684a2-4889-11e8-9273-bfb21a1abc7d.png)  
+
+For instance, if you prefer to specify the Assigned Member first, followed by the Card Title, Card Description, and Due Date, you would set the 'Trello Field Order' to: 
+
+```
+assigned_member,name,desc,due,input_labels,list_name,position,url_attachment
+```
+
+> Please remember that the way you set this order should match how you input the data when you use the Alfred command, as the fields correspond to the positions defined here. So if you set 'assigned_member' as the first field when you input the command in Alfred, the first field after the keyword should be the Assigned Member's username.
+
+By customising the Trello field order, you can further tailor the Alfrello workflow to your needs, boosting your productivity with Alfred and Trello.
+
+
+
+### Basic Usage  
  
-  ![sdsd](https://user-images.githubusercontent.com/2527231/39226873-50f9dbb8-4894-11e8-8864-0ce57a8a385d.png)
+ **Card Title**
+ ---  
+ 
+```
+trello Plan Meeting
+```  
+ 
+ ![](images/plan_meeting.png)
+ 
+will create a card on your board on the first list with the title `Plan Meeting`
+
+![](images/title.png)
  
  **Card Description**  
+ ---
  
- ```
- trello make dinner reservation; table for 10 people at around 7:30pm
- ```
+```
+trello Plan Meeting; Meeting with Team
+```
  
- will create a card on your board on the first list with the title "make dinner reservation" and description "table for 10 people at around 7:30pm"
+![](images/desc.png)
  
- ![](https://user-images.githubusercontent.com/2527231/39225192-166199c8-488a-11e8-8f38-015befdc412c.png)  
+will create a card on your board on the first list with the title `Plan Meeting` and description `Meeting with Team`.
  
- ![](https://user-images.githubusercontent.com/2527231/39226879-638a9a1a-4894-11e8-8449-2ae9f97af35e.png)  
- 
- **Labels**  
- 
- ```
- trello make dinner reservation; table for 10 people at around 7:30pm; blue
- ```
- 
- will create a card on your board on the first list with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label  
- 
- **Available Labels**  
- - **all** (will add green, yellow, orange, red, purple and blue)
- - **green**
- - **yellow**
- - **orange**
- - **red**
- - **purple**
- - **blue**
+![](images/desc_board.png)
 
- You can add more than one label by comma separating them.
+![](images/card_desc.png)
  
- ```
- trello make dinner reservation; table for 10 people at around 7:30pm; blue,red,yellow
- ```
- 
- Please note: Make sure not to have spaces between comma separated labels.  
- Custom labels are not supported. If you find a way let me know :)  
- 
- ![](https://user-images.githubusercontent.com/2527231/39225416-6a59e25a-488b-11e8-8d0e-e7b6c2f3fe81.png)  
- 
- ![](https://user-images.githubusercontent.com/2527231/39226897-84c4c976-4894-11e8-84d2-c11daa3e37b4.png)  
- 
- ![](https://user-images.githubusercontent.com/2527231/39226930-b52e97ae-4894-11e8-92e3-37052eac9794.png)
+ **Labels**
+ ---
 
+- `all` (will add all the available labels)
+- `green`
+- `yellow`
+- `orange`
+- `red`
+- `purple`
+- `blue`
+- `sky`
+- `lime`
+- `pink`
+- `black`  
+- `Any custom labels by the name`
+
+You can add any number of labels by comma-separating them.
+ 
+```
+trello Plan Meeting; Meeting with Team; red, green, important, super important
+```
+
+![](images/labels.png)
+ 
+will create a card on your board on the first list with the title `Plan Meeting` and description `Meeting with Team` with `red`, `green`, `important` and `super important` labels. 
+
+> `important` and `super important` are custom labels
+
+![](images/labels_board.png)
 
 **Due Date**  
+---
+
+The `due date` can be an exact date or a relative date like `today`, `tomorrow`, or `next week`.
+
+You can define the date format in the Workflow configuration. For example, `d/m/Y` or `d/m/Y`.
  
 ```
-trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018
+trello Plan Meeting; Meeting with Team; red, green, important, super important; next monday
 ```
+![](images/due.png)
 
-will create a card on your board on the first list with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
-The due date will be set as 04/26/2018  
+will create a card on your board on the first list with the title `Plan Meeting` and description `Meeting with Team` with `red`, `green`, `important` and `super important` labels. The due date will be set as `next monday`.
+  
 
-![](https://user-images.githubusercontent.com/2527231/39225889-2a305bf2-488e-11e8-82e2-4da85e9db1ab.png)  
-
-![](https://user-images.githubusercontent.com/2527231/39226946-e22d4368-4894-11e8-8071-f7b78742d768.png)
+![](images/due_board.png)
 
 **List Name**  
+---
  
 ```
-trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today
+trello Plan Meeting; Meeting with Team; red, green, important, super important; next monday; Upcoming
 ```
 
-will create a card on your board on the list **Today** with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
-The due date will be set as 04/26/2018.
+![](images/list.png)
 
-Please note: **List name are case sensitive**  today will not work if your list is named Today.
-
-The example will only work if you have a list named Today, otherwise the card will be created on your first list.  
-
-![](https://user-images.githubusercontent.com/2527231/39226075-44f065e4-488f-11e8-900c-b2474b7d06e4.png)  
-
-![](https://user-images.githubusercontent.com/2527231/39226084-57dd980c-488f-11e8-93a5-ebdf397fdffa.png)
+will create a card on your board on the `Upcoming` list with the title `Plan Meeting` and description `Meeting with Team` with `red`, `green`, `important` and `super important` labels. The due date will be set as `next monday`. 
 
 
-**Card Position**  
- 
+> Please note: `List names` are case sensitive
+
+![](images/list_board.png)
+
+
+
+**Card Position**
+---
+
+Options are `top` or `bottom`.
+   
 ```
-trello make dinner reservation; table for 10 people at around 7:30pm; blue; 04/26/2018; Today; top
-```
-
-will create a card on your board on the list **Today** with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
-The due date will be set as 04/26/2018.  
-
-Note: If you don't specify a card position, your new card will automatically be placed at the end of the list. 
-
-**Available options (case sensitive)**  
-- **top**  
-- **bottom**
-
-![](https://user-images.githubusercontent.com/2527231/39225889-2a305bf2-488e-11e8-82e2-4da85e9db1ab.png)  
-
-**bottom**  
-
-![](https://user-images.githubusercontent.com/2527231/39226984-280ab73a-4895-11e8-9892-541213eec1e4.png)  
-
-**top**  
-
-![](https://user-images.githubusercontent.com/2527231/39226985-283cb2bc-4895-11e8-9939-1a4bcdb8525d.png)
-
-**URL Attachment**
-
-```
-trello make dinner reservation; table for 10 people at around 7:30pm; blue; 12/24/2019; Today; top; https://myfavoriterestaurant.com
+trello Plan Meeting (bottom); Meeting with Team; red, green, important, super important; next monday; Upcoming; bottom
 ```
 
-will create a card on your board on the list **Today** with the title "make dinner reservation" and description "table for 10 people at around 7:30pm" with a "blue" label.
-The due date will be set as 12/24/2019.  
-The URL `https://myfavoriterestaurant.com` is added as an attachment.
+![](images/pos.png)
 
-![](https://user-images.githubusercontent.com/7596032/71087131-68196980-2169-11ea-85b1-5d1658e00db3.png)
+will create a card on your board on the `Upcoming` list with the title `Plan Meeting (bottom)` and description `Meeting with Team` with `red`, `green`, `important` and `super important` labels. The due date will be set as `next monday`. The card will be created at the `bottom` of the list
 
-![](https://user-images.githubusercontent.com/7596032/71087140-7071a480-2169-11ea-92a3-ce553316bcf5.png)
+> If you don't specify a card position, your new card will automatically be placed at top of the list. 
 
-![](https://user-images.githubusercontent.com/7596032/71087148-749dc200-2169-11ea-9031-329183f793c9.png)
-## Advanced Usage  
+![](images/pos_card.png)
 
-You can skip any of the available fields by simply adding **;**  
 
-**{Card Title}; {Card Description}; {Labels}; {Due Date}; {List Name}; {Card Position}; {URL Attachment}**
 
-For example if I wanted to post a card with Title, Label and a Due date i would use this syntax
-
-**{Card Title}; ; {Labels}; {Due Date}**
+**URL Attachement**
+---
 
 ```
-trello Clean my car; ; red; 04/29/2018
+trello Plan Meeting; Meeting with Team; red, green, important, super important; next monday; Upcoming; top; https://www.alfredapp.com
 ```
 
-![](https://user-images.githubusercontent.com/2527231/39227249-c4188d86-4896-11e8-9697-eff35768b368.png)  
+![](images/url.png)
 
-![](https://user-images.githubusercontent.com/2527231/39227247-bef258aa-4896-11e8-8f2b-52e8e7d73504.png)  
+will create a card on your board on the `Upcoming` list with the title `Plan Meeting (bottom)` and description `Meeting with Team` with `red`, `green`, `important` and `super important` labels. The due date will be set as `next monday`. The card will be created at the `top` of the list and have `https://www.alfredapp.com` attached.
 
-Or a card with title only but on a different list  
+![](images/url_board.png)
 
-**{Card Title}; ; ; ; {List Name}**  
+![](images/url_card.png)
+
+**Assigned Members**
+---
+
+To assign a member to the card, input their username. It can be prefixed with an `@` sign or just the username. You can also use `me` to assign a card to yourself.
 
 ```
-trello Clean my car; ; ; ; Upcoming
-```  
+trello Plan Meeting; Meeting with Team; red, green, important, super important; today; Today; top; https://www.alfredapp.com; me
+```
 
-![](https://user-images.githubusercontent.com/2527231/39227342-4c118abc-4897-11e8-9486-4f008fd8fbd5.png)  
+![](images/me.png)
 
-![](https://user-images.githubusercontent.com/2527231/39227333-3f9a37a2-4897-11e8-81ae-7089f22153a6.png)  
+will create a card on your board on the `Today` list with the title `Plan Meeting` and description `Meeting with Team` with `red`, `green`, `important` and `super important` labels. The due date will be set as `Today`. The card will be created at the `top` of the list and have `https://www.alfredapp.com` attached. The card will be assigned to me.
 
+![](images/me_board.png)
 
-## Environment Variables by @gamell
-
-Given that some might want always to create the cards on the same list, or with the same label, or same due date, or same position _by default_, I added the ability to set those defaults via the environment variables `trello.list_name`, `trello.label`, `trello.due` and `trello.position`.
-
-One can conveniently add or edit those environment variables without programming knowledge through the Alfred Workflow editor, clicking on the `[x]` button on the top right (see screenshot below). 
-
-*Note:* If you don't set the variable, the workflow will behave as it did before.
-
-![](https://user-images.githubusercontent.com/2460215/44072791-96f57f66-9f45-11e8-9dbc-399744c5c34c.png)
-
-![](https://user-images.githubusercontent.com/2460215/44072799-9d4107b4-9f45-11e8-9444-4d71f7f8135f.png)
+In the following example will be creating the same card by assigning it to myself (`me`) and another user (`billgates1955`).
 
 
-## FAQ  
+```
+trello Plan Meeting; Meeting with Team; red, green, important, super important; today; Today; top; https://www.alfredapp.com; me, billgates1955
+```
 
-Coming soon
+![](images/bill.png)
 
+![](images/bill_board.png)
+
+## Configure Workflow
+
+
+`api key`: Your unique Trello API key. You can get this from Trello's Developer API Key page.
+
+`trello token`: Your Trello token. This gives the workflow permission to access your Trello data and perform actions like creating cards.
+
+`Trello Board id`: The unique identifier for the Trello board where you want to create cards. You can find this in the board's URL.
+
+`workflow keyword`: The keyword you'll type into Alfred to trigger this workflow. Choose something easy to remember related to the task.
+
+`show notification`: If this is enabled, macOS will display a notification each time a card is created.
+
+`play sound`: If this is enabled, a sound will play after a card is posted.
+
+`show large type`: If this is enabled, the result of posting a card will be shown in large text on your screen.
+
+`default due date`: Sets a default due date for all new cards. You can input a specific date, or use terms like 'today', 'tomorrow', or 'next week'.
+
+`Default list name`: Allows you to set a default list within the Trello board where new cards will be created.
+
+`default labels`: Allows you to set default labels for all new cards. You can specify one or multiple labels, separated by commas. For example, 'green, red'.
+
+`Default position`: Sets where new cards will appear within their list. Options are 'top' or 'bottom'.
+
+`default member`: Here you can set the default member to be assigned to a card. It can be a username, 'me', or multiple usernames separated by commas.
+
+`date format`: Allows you to define the date format. Examples are 'd/m/Y' or 'm/d/Y'.
+
+`Trello field order`: Allows you to set the default order of your query. The default order is `name,desc,input_labels,due,list_name,position,url_attachment,assigned_member`. You can rearrange these fields separated by commas.
+
+`Debug`: Enabling debug will record CURL, PHP, and Trello API errors to a log.txt file inside the workflow folder. This is useful for troubleshooting errors.
+
+`export PATH`: If you have issues with the workflow not finding your PATH, you can define it here. For example: 'export PATH="/opt/homebrew/bin:/usr/local/bin:${PATH}"'. Please be careful when adding custom paths.
+
+![](images/config.png)
  
 ## License
 
