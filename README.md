@@ -12,7 +12,7 @@ Alfred Workflow for creating cards on a Trello board
 ```
 
 ## What's New
-- `NEW` Made for Alfred 5.1 
+- `NEW` Made for Alfred 5
 - `NEW` Support for all Trello Labels and Custom Labels
 - `NEW` Assign a card to yourself and or other members
 - `NEW` Use natural language for due dates. Use terms like 'today', 'tomorrow', or 'next week'.
@@ -20,7 +20,7 @@ Alfred Workflow for creating cards on a Trello board
 - `NEW` Personalise the workflow and rearrange all fields based on how you use Trello! 
 - `NEW` Use default overwrites so you don't have to type the same fields repeatedly.
 - `NEW` All settings are managed within the Workflow configuration 
-- `NEW` Enable the Debug Log to see and record helpful error messages into log.txt
+- `NEW` Enable the Debug Log to see and record helpful error messages into log.txt and your clipboard
 - `NEW` Path overwrite
 
 ## How To Install
