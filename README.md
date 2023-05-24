@@ -30,6 +30,21 @@ Alfred Workflow for creating cards on a Trello board
 
 > More information on installing Workflows in Alfred [here](https://www.alfredapp.com/help/workflows/#discovering).
 
+## Requirements
+
+- Alfred 5
+- PHP 8
+
+> More information [here](https://www.alfredapp.com/help/kb/install-dependencies/)
+
+
+ 
+Note
+
+> If, for any reasons you are having issues with your PHP installation and the workflow finding the `PATH` to your executables. You can define a `custom PATH` in the Workflow configuration.<br> 
+> For example: `export PATH="/opt/homebrew/bin:/usr/local/bin:${PATH}"`<br> 
+> Please be very careful when adding custom paths.
+
 ## Alfrello Setup
 
 ### Trello API key
