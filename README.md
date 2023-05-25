@@ -350,4 +350,4 @@ trello Plan Meeting; Meeting with Team; red, green, important, super important; 
  
 ## License
 
-[MIT](https://github.com/MikoMagni/Trello-Workflow-for-Alfred/blob/master/MIT%20License) © Miko Magni
+[MIT](https://github.com/MikoMagni/Alfrello/blob/master/LICENSE) © Miko Magni
