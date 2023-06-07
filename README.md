@@ -21,7 +21,7 @@ Alfred Workflow for creating cards on a Trello board
 - `NEW` Use default overwrites so you don't have to type the same fields repeatedly.
 - `NEW` All settings are managed within the Workflow configuration 
 - `NEW` Enable the Debug Log to see and record helpful error messages into log.txt and your clipboard
-- `NEW` Path overwrite
+- `NEW` Path Overwrite (for Custom PHP Installation)
 
 ## How To Install
 
